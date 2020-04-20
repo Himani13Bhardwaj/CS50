@@ -1,7 +1,9 @@
 # Project 0
 
 Web Programming with Python and JavaScript
+
 ---------------Housing.com----------------------
+
 It is a realstate application where viewer can find out the villas,apartment and township.
 Navigation bar conatin three tabs. It is responsive and gets collapsed when we resize it.
 Navigation bar, breadcrum, Carousel, list are bootstrap component.
