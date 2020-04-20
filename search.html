@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real state property</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./stylesheet/main.css">
+</head>
+
+<body>
+  <div class="container-fluid zeroPaddingMargin">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html">Housing</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Search</span>
+        </div>
+        <input id="locationInput" type="text" class="form-control" placeholder="search" aria-label="search"
+          aria-describedby="basic-addon1">
+      </div>
+      <br /><br />
+      <table id="propertyList" class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark ">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Location</th>
+            <th scope="col">Price</th>
+            <th scope="col">Property Type</th>
+            <th scope="col">Contact Agent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="location">Ahmedabad</td>
+            <td>INR 64,692.03 / sqft</td>
+            <td>Plot/Apartment</td>
+            <td>
+              <a href="mailto:xxxx@gmail.com">contact</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="location">Bangalore</td>
+            <td>72,27.42 / sqft</td>
+            <td>Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td class="location">Delhi</td>
+            <td>INR 1,37,247.52 / sqft</td>
+            <td>Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td class="location">Mumbai</td>
+            <td>INR 1,83,711.92 / sqft</td>
+            <td>Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td class="location">Goa</td>
+            <td>INR 14,18.51 / sqft</td>
+            <td>Villas</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td class="location">Pune</td>
+            <td>INR 1,33,218.55 / sqft</td>
+            <td>Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td class="location">Chandigarh</td>
+            <td>INR 86,12.23 / sqft</td>
+            <td>Villas/ Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td class="location">Hyderabad</td>
+            <td>INR 57,972.5 / sqft</td>
+            <td>Plot/Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td class="location">Gurgaon</td>
+            <td>INR 1,24,730.99 / sqft</td>
+            <td>Villas/ Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td class="location">Kolkata</td>
+            <td>INR 55,996.5 / sqft</td>
+            <td>Plot/Apartment</td>
+            <td><a href="mailto:xxxx@gmail.com">contact</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script>
+  $(document).ready(function () {
+    $("#locationInput").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#propertyList tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
+
+</html>

@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.zeroPaddingMargin, .features .topFeature {
+  margin: 0;
+  padding: 0;
+}
+
+ul.navbar-nav li.listClass, ul.navbar-nav li.active {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+ul.navbar-nav li.active {
+  color: #ffffff;
+}
+
+#realStateCarousel {
+  height: 500px;
+  box-shadow: 1px 1px 9px 3px #252424;
+}
+#realStateCarousel .carousel-inner {
+  height: 100%;
+}
+#realStateCarousel .carousel-inner .carousel-item {
+  height: 100%;
+}
+#realStateCarousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.features {
+  display: inline-block;
+  margin: 3em 0 1em;
+  width: 100%;
+  text-align: justify;
+}
+.features.titleImage {
+  height: 500px;
+}
+.features.titleImage img {
+  width: 100%;
+  height: 100%;
+}
+.features .paragrap, .features .topFeature a.list p {
+  position: absolute;
+  bottom: 5px;
+  color: #fff;
+  width: 98%;
+  top: auto;
+  background: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  left: 0.25rem;
+}
+.features .paragrap span, .features .topFeature a.list p span {
+  display: block;
+}
+.features .topFeature {
+  float: left;
+  height: 400px;
+}
+.features .topFeature a.list {
+  width: 98%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+.features .topFeature a.list > img {
+  width: 100%;
+  height: 100%;
+}
+.features .loanPlan img {
+  width: 40%;
+  height: 100%;
+  margin-right: 16px;
+}
+
+ul#villas li {
+  background: #0000;
+}
+ul#villas li:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.centerAligned {
+  text-align: center;
+}
+
+footer {
+  background: rgba(199, 199, 199, 0.4);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2em;
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  #realStateCarousel {
+    height: 351px;
+  }
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+  }
+
+  #realStateCarousel {
+    height: 317px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10px;
+  }
+
+  #realStateCarousel {
+    height: 300px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
