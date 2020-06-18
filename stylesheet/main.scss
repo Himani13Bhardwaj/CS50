@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Times New Roman", Times, serif;
+}
+.zeroPaddingMargin{
+    margin: 0;
+    padding: 0;
+}
+ul.navbar-nav{
+    li.listClass{
+        font-family: "Times New Roman", Times, serif;
+        text-transform: uppercase;
+    }
+    li.active{
+        @extend .listClass;
+        color: #ffffff;
+    }
+}
+
+#realStateCarousel{
+    height: 500px;
+    box-shadow: 1px 1px 9px 3px #252424;
+    .carousel-inner{
+        height: 100%;
+        .carousel-item{
+            height: 100%;
+            img{
+                width:100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+}
+.features{
+    display: inline-block;
+    margin: 3em 0 1em;
+    width: 100%;
+    text-align: justify;
+    &.titleImage{
+        height: 500px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .paragrap{
+        position: absolute;
+        bottom: 5px;
+        color: #fff;
+        width: 98%;
+        top: auto;
+        background: rgba(0, 0, 0, 0.4);
+        margin: auto;
+        left: 0.25rem;
+        span{
+            display: block;
+        }
+    }
+    .topFeature{
+        @extend .zeroPaddingMargin;
+        float: left;
+        height: 400px;
+        a.list{
+            width: 98%;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            >img{
+                width: 100%;
+                height: 100%; 
+            }
+            p{
+                @extend .paragrap
+            }
+        }
+    }
+    .loanPlan{
+        img{
+            width: 40%;
+            height: 100%;
+            margin-right: 16px;
+        }
+    }
+}
+
+
+$baseColor: #0000;
+$alternateColor: rgba($baseColor, 0.22);
+ul#villas{
+    li{
+        background: $baseColor;
+    }
+    li:nth-child(odd) { background: $alternateColor; }
+}
+.centerAligned{
+    text-align: center;
+}
+
+footer{
+    background: rgba(199, 199, 199, 0.4);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2em;
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+    #realStateCarousel {
+        height: 351px;    
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-size:12px;
+    }
+    #realStateCarousel {
+        height: 317px;    
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-size:10px;
+    }
+    #realStateCarousel {
+        height: 300px;    
+    }
+}
